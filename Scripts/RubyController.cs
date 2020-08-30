@@ -14,8 +14,13 @@ public class RubyController : MonoBehaviour
     void Update()
     {
         Vector2 posision = transform.position;
+        Quaternion rotation = transform.rotation;
+
         posision.x = posision.x + 0.1f;
+        rotation.x = rotation.z + 10f;
+
         transform.position = posision; 
+        transform.rotation = rotation;
     
     }
 }
