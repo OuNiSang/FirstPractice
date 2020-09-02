@@ -18,7 +18,17 @@ public class RubyController : MonoBehaviour
 
         float getUser_H_Input = Input.GetAxis("Horizontal"); //get the input from keyborad "a", "d", negitive = left, positive = right
         float getUser_V_Input = Input.GetAxis("Vertical");
-        // Debug.Log(getUserHInput);   //for monitoring
+        float getUser_3d_Input = Input.GetAxis("Mouse ScrollWheel");
+        float test_input_Zoom = Input.GetAxis("Zoom joysticks");
+        float test_input_move = Input.GetAxis("Move joysticks");
+        float test_input_lockback = Input.GetAxis("lockback_rightstick");
+        
+        Debug.Log(test_input_lockback);
+        Debug.Log(test_input_move);
+        Debug.Log(test_input_Zoom);
+        // Debug.Log(getUser_H_Input);
+        // Debug.Log(getUser_V_Input);   //for monitoring
+        // Debug.Log(getUser_3d_Input);
         Vector2 userPosision = transform.position;
         userPosision.x += 3f*getUser_H_Input*Time.deltaTime;//Time.deltatime means change from fram per fresh to time per fresh
         userPosision.y += 3f*getUser_V_Input*Time.deltaTime;
